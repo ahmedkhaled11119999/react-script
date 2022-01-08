@@ -10,7 +10,7 @@
 6. go to the end of the file and add the following: `PATH=$PATH:CLONED_REPO_PATH`, replace "CLONED_REPO_PATH" with the copied text in your clipboard by clicking CTRL+SHIFT+V in the temrinal.
 7. click CTRL+S to save if you are using nano then CTRL+X to close, or :wq! in command mode for vim or whatever your text-editor saving shortcut and then exit.
 8. restart your terminal.
-9. now go to the directory you want to save your react projec to, and run the script by typing `. create-easy-react project_name` and wait for it :wink:
+9. now go to the directory you want to save your react project to, and run the script by typing `. create-easy-react project_name` and wait for it :wink:
 
 
 ---
@@ -29,7 +29,7 @@
 
 
 <em>**create-easy-react**</em>  generates a project structure for you like the following :
-`
+```bash
 .
 └── /src
     .
@@ -39,7 +39,7 @@
     ├── /reducers
     ├── index.js
     └── App.js
-`
+```
 
 1. components: Add here any standalone component.
 2. reducers: Add all your reducer files there with same syntax of reducerExample and then add their names in src/reducers/index.js to make them visible to your redux store.
