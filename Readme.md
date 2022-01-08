@@ -1,6 +1,6 @@
 # create-easy-react
 
-## How to run "<p style="color:red">Linux</p> users only"
+## How to run "<font color="red">Linux users only</font>"
 
 1. first you need to clone the repository.
 2. go to the directory of the repository that you cloned through your terminal.
@@ -16,7 +16,7 @@
 ---
 
 
-<p style="color:blue"><em>**create-easy-react**</em></p> is a shell script that prepare your react project. it installs all the common packages for your project such as:
+<font color="blue"><em>**create-easy-react**</em></font> is a shell script that prepare your react project. it installs all the common packages for your project such as:
 
 - Bootstrap
 - Axios
@@ -28,7 +28,7 @@
 ---
 
 
-<p style="color:blue"><em>**create-easy-react**</em></p> generates this project structure for you :
+<font color="blue"><em>**create-easy-react**</em></font>generates this project structure for you :
 
 ```bash
 .
@@ -49,5 +49,5 @@
 
 ---
 
-<p style="color:blue"><em>**create-easy-react**</em></p> imports everything. redux store is initialized in App.js .
+<font color="blue"><em>**create-easy-react**</em></font> imports everything. redux store is initialized in App.js .
 All you need to do is to import the hooks you will use, import axios wherever you will use it, customize your routes in App.js file and you are good to go!
