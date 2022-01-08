@@ -7,7 +7,7 @@
 3. type `pwd` , copy the output using CTRL+SHIFT+V
 4. type `cd` , then open the .bashrc file using and command-line text-editor "i prefer nano so i'll use it but you can use whatever you want"
 5. type `nano .bashrc`
-6. go to the end of the file and add the following, replace "CLONED_REPO_PATH" with the copied text in your clipboard by clicking CTRL+SHIFT+V in temrinal : `PATH=$PATH:CLONED_REPO_PATH`
+6. go to the end of the file and add the following: `PATH=$PATH:CLONED_REPO_PATH`, replace "CLONED_REPO_PATH" with the copied text in your clipboard by clicking CTRL+SHIFT+V in the temrinal.
 7. click CTRL+S to save if you are using nano then CTRL+X to close, or :wq! in command mode for vim or whatever your text-editor saving shortcut and then exit.
 8. restart your terminal.
 9. now go to the directory you want to save your react projec to, and run the script by typing `. create-easy-react project_name` and wait for it :wink:
@@ -29,16 +29,17 @@
 
 
 <em>**create-easy-react**</em>  generates a project structure for you like the following :
-
+`
 .
 └── /src
-    ├── /components            # all your components here.
-    ├── /pages                 # all your pages here.            
+    .
+    ├── /components            
+    ├── /pages                           
     ├── /actions
     ├── /reducers
     ├── index.js
     └── App.js
-
+`
 
 1. components: Add here any standalone component.
 2. reducers: Add all your reducer files there with same syntax of reducerExample and then add their names in src/reducers/index.js to make them visible to your redux store.
