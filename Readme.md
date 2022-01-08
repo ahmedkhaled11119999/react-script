@@ -21,7 +21,7 @@
 - Bootstrap
 - Axios
 - Redux
-- Redux devtools
+- Redux devtools `you need to install the chrome extension for this to take effect, download it [here](https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd?hl=en)`
 - React Router
 - maybe more soon! :smile:
 
