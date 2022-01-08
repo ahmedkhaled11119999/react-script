@@ -21,14 +21,15 @@
 - Bootstrap
 - Axios
 - Redux
-- Redux devtools `you need to install the chrome extension for this to take effect, download it [here](https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd?hl=en)`
+- Redux DevTools "you need to install the Redux DevTools chrome extension for this to take effect, download it [here](https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd?hl=en)"
 - React Router
 - maybe more soon! :smile:
 
 ---
 
 
-<em>**create-easy-react**</em>  generates a project structure for you like the following :
+<em>**create-easy-react**</em>  generates this project structure for you :
+
 ```bash
 .
 └── /src
