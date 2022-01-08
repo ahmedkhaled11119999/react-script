@@ -1,11 +1,11 @@
 # create-easy-react
 
-## How to run "Linux users only"
+## How to run "<p style="color:red">Linux</p> users only"
 
 1. first you need to clone the repository.
 2. go to the directory of the repository that you cloned through your terminal.
 3. type `pwd` , copy the output using CTRL+SHIFT+V
-4. type `cd` , then open the .bashrc file using and command-line text-editor "i prefer nano so i'll use it but you can use whatever you want"
+4. type `cd` to navigate to your home directory, then open the .bashrc file using and command-line text-editor "i prefer nano so i'll use it but you can use whatever you want"
 5. type `nano .bashrc`
 6. go to the end of the file and add the following: `PATH=$PATH:CLONED_REPO_PATH`, replace "CLONED_REPO_PATH" with the copied text in your clipboard by clicking CTRL+SHIFT+V in the temrinal.
 7. click CTRL+S to save if you are using nano then CTRL+X to close, or :wq! in command mode for vim or whatever your text-editor saving shortcut and then exit.
@@ -16,19 +16,19 @@
 ---
 
 
-<em>**create-easy-react**</em> is a shell script that prepare your react project. it installs all the common packages for your project such as:
+<p style="color:blue"><em>**create-easy-react**</em></p> is a shell script that prepare your react project. it installs all the common packages for your project such as:
 
 - Bootstrap
 - Axios
 - Redux
-- Redux DevTools "you need to install the Redux DevTools chrome extension for this to take effect, download it [here](https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd?hl=en)"
+- Redux DevTools *you need to install the Redux DevTools chrome extension for this to take effect, download it [here](https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd?hl=en)*
 - React Router
 - maybe more soon! :smile:
 
 ---
 
 
-<em>**create-easy-react**</em>  generates this project structure for you :
+<p style="color:blue"><em>**create-easy-react**</em></p> generates this project structure for you :
 
 ```bash
 .
@@ -49,5 +49,5 @@
 
 ---
 
-<em>**create-easy-react**</em> imports everything. redux store is initialized in App.js .
+<p style="color:blue"><em>**create-easy-react**</em></p> imports everything. redux store is initialized in App.js .
 All you need to do is to import the hooks you will use, import axios wherever you will use it, customize your routes in App.js file and you are good to go!
