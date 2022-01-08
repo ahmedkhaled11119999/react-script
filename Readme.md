@@ -1,32 +1,51 @@
 # create-easy-react
 
-<em>create-easy-react</em> is a linux command that prepare your react project , install all the common packages for your project such as:
+## How to run "Linux users only"
+
+1. first you need to clone the repository.
+2. go to the directory of the repository that you cloned through your terminal.
+3. type `pwd` , copy the output using CTRL+SHIFT+V
+4. type `cd` , then open the .bashrc file using and command-line text-editor "i prefer nano so i'll use it but you can use whatever you want"
+5. type `nano .bashrc`
+6. go to the end of the file and add the following, replace "CLONED_REPO_PATH" with the copied text in your clipboard by clicking CTRL+SHIFT+V in temrinal : `PATH=$PATH:CLONED_REPO_PATH`
+7. click CTRL+S to save if you are using nano then CTRL+X to close, or :wq! in command mode for vim or whatever your text-editor saving shortcut and then exit.
+8. restart your terminal.
+9. now go to the directory you want to save your react projec to, and run the script by typing `. create-easy-react project_name` and wait for it :wink:
+
+
+---
+
+
+<em>**create-easy-react**</em> is a shell script that prepare your react project. it installs all the common packages for your project such as:
 
 - Bootstrap
 - Axios
 - Redux
 - Redux devtools
 - React Router
+- maybe more soon! :smile:
 
 ---
 
-<em>create-easy-react</em>  generates a project structure for you like the following :
+
+<em>**create-easy-react**</em>  generates a project structure for you like the following :
 
 .
 └── /src
-    ├── /components
-    ├── /pages
+    ├── /components            # all your components here.
+    ├── /pages                 # all your pages here.            
     ├── /actions
     ├── /reducers
     ├── index.js
     └── App.js
-    
-1.components: Add here any standalone component.
-2.reducers: Add all your reducer files there with same syntax of reducerExample and then add their names in src/reducers/index.js to make them visible to your redux store.
-3.actions: Add all your actions in src/actions/index.js with same syntax as the example and import it wherever you want.
-4.pages: Add here your main pages that goes in the src/App.js file.
+
+
+1. components: Add here any standalone component.
+2. reducers: Add all your reducer files there with same syntax of reducerExample and then add their names in src/reducers/index.js to make them visible to your redux store.
+3. actions: Add all your actions in src/actions/index.js with same syntax as the example and import it wherever you want.
+4. pages: Add here your main pages that goes in the src/App.js file.
 
 ---
 
-<em>create-easy-react</em> imports everything. redux store is initialized in App.js
+<em>**create-easy-react**</em> imports everything. redux store is initialized in App.js .
 All you need to do is to import the hooks you will use, import axios wherever you will use it, customize your routes in App.js file and you are good to go!
