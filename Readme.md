@@ -34,7 +34,8 @@
 .
 └── /src
     .
-    ├── /components            
+    ├── /components
+    ├── /css    
     ├── /pages                           
     ├── /actions
     ├── /reducers
@@ -43,9 +44,10 @@
 ```
 
 1. components: Add here any standalone component.
-2. reducers: Add all your reducer files there with same syntax of reducerExample and then add their names in src/reducers/index.js to make them visible to your redux store.
-3. actions: Add all your actions in src/actions/index.js with same syntax as the example and import it wherever you want.
-4. pages: Add here your main pages that goes in the src/App.js file.
+2. css: Add here all your css files.
+3. reducers: Add all your reducer files there with same syntax of reducerExample and then add their names in src/reducers/index.js to make them visible to your redux store.
+4. actions: Add all your actions in src/actions/index.js with same syntax as the example and import it wherever you want.
+5. pages: Add here your main pages that goes in the src/App.js file.
 
 ---
 
