@@ -4,7 +4,7 @@
 
 1. first you need to clone the repository.
 2. go to the directory of the repository that you cloned through your terminal.
-3. type `pwd` , copy the output using CTRL+SHIFT+V
+3. type `pwd` , copy the output using CTRL+SHIFT+C
 4. type `cd` to navigate to your home directory, then open the .bashrc file using and command-line text-editor "i prefer nano so i'll use it but you can use whatever you want"
 5. type `nano .bashrc`
 6. go to the end of the file and add the following: `PATH=$PATH:CLONED_REPO_PATH`, replace "CLONED_REPO_PATH" with the copied text in your clipboard by clicking CTRL+SHIFT+V in the temrinal.
