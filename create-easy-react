@@ -4,28 +4,40 @@ echo "Please enter a react project name to proceed"
 else
 npx create-react-app $1
 cd $1
-mkdir src/actions; mkdir src/reducers; mkdir src/components; mkdir src/pages;
+mkdir src/actions; mkdir src/reducers; mkdir src/components; mkdir src/pages; mkdir src/css;
 touch src/reducers/index.js; touch src/reducers/reducerExample.js; touch src/actions/index.js
 npm install bootstrap
 npm install react-router-dom@5
-#routing in app.js
 npm install axios
-#import axios in the file u wanna fetch ur api
 npm install redux react-redux
-sed -i "5i import 'bootstrap/dist/css/bootstrap.css';\nimport { Provider } from 'react-redux';\nimport{ createStore } from 'redux';\nimport allReducers from './reducers/';" src/index.js
-sed -i "13i <Provider store={store}>" src/index.js
-sed -i "15i </Provider>" src/index.js 
-sed -i "10i const store = createStore(\nallReducers,\nwindow.__REDUX_DEVTOOLS_EXTENSION__ &&window.__REDUX_DEVTOOLS_EXTENSION__()\n);" src/index.js
-sed -i "2i import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'" src/App.js
+#adding src/index.js imports . 
+sed -i '0,/import/i import "bootstrap/dist/css/bootstrap.css";\nimport { Provider } from "react-redux";\nimport { createStore } from "redux";\nimport allReducers from "./reducers/";' src/index.js
+#correcting the path of App.css and index.css
+sed -i 's/\.\/App.css/.\/css\/App.css/g' src/App.js
+sed -i 's/\.\/index.css/.\/css\/index.css/g' src/index.js
+#changing the path of App.css and index.css files
+mv src/App.css src/css/; mv src/index.css src/css/;
+#wrapping App in Provider in src/index.js .
+sed -i '/<App \/>/i <Provider store={store}>' src/index.js
+sed -i '/<App \/>/a </Provider>' src/index.js
+#initialize store in src/index.js .
+sed -i '/ReactDOM.render/i const store = createStore(\nallReducers,\nwindow.__REDUX_DEVTOOLS_EXTENSION__ &&window.__REDUX_DEVTOOLS_EXTENSION__()\n);\n' src/index.js
+#adding src/App.js imports . 
+sed -i '0,/import/i import { BrowserRouter as Router, Switch, Route } from "react-router-dom";' src/App.js
+#initializing an action template
 printf "export const actionExample = (parameterExample) => {  return {\ntype: 'ACTION',\npayload: parameterExample,};};" | tee -a src/actions/index.js
+#initializing a reducer template
 printf "const reducerExample = (state = 0, action) => {\nswitch (action.type) {\ncase 'ACTION':\nreturn state + 1;\ndefault:\nreturn state;}};\nexport default reducerExample;" | tee -a src/reducers/reducerExample.js
-printf "import reducerExample from './reducerExample';\nimport { combineReducers } from 'redux';\nconst allReducers = combineReducers({reducerExample,});\nexport default allReducers;" | tee -a src/reducers/index.js
-for ((i=0;i<=20;i++)); do
-        if [ $i -eq 10 ]; then
+#initializing combineReducers
+printf "import reducerExample from './reducerExample';\nimport { combineReducers } from 'redux';\nconst allReducers = combineReducers({reducerExample,});\nexport default allReducers;\n" | tee -a src/reducers/index.js
+#copyrights :D
+for ((i=0;i<=10;i++)); do
+        if [ $i -eq 5 ]; then
         printf 'Scripted by Ahmed Khaled :D \n'
         else
         printf -- '- - - - - - - - - - - - - -\n'
         fi
 done
-printf "# React Project '$1' created.\n# Installed [Bootstrap / React Router / Axios / React Redux] Packages.\n# Added default project folders:\n  1.components: Add here any standalone component.\n  2.reducers: add all your reducer files there with same syntax of reducerExample and then add their names in src/reducers/index.js to make them visible to your redux store.\n  3.actions: add all your actions in src/actions/index.js with same syntax as the example and import it wherever you want.\n  4.pages: add here your main pages that goes in the src/App.js file.\n# Everything is imported and ready to use, all you need to import is your hooks to start! , and import axios in the file which you are going to use it.\n"
+#feedback for the user
+printf "\n\n\nFINISHED SUCCESSFULLY.\n\n\n# React Project '$1' created.\n# Installed [Bootstrap / React Router / Axios / React Redux] Packages. Check packages versions in package.json file. \n# Added default project directories:\n  1. components: Add here any standalone component.\n  2. css: Add here any css file.\n  3. reducers: add all your reducer files there with same syntax of reducerExample and then add their names in src/reducers/index.js to make them visible to your redux store.\n  4. actions: add all your actions in src/actions/index.js with same syntax as the example and import it wherever you want.\n  5. pages: add here your main pages that goes in the src/App.js file.\n# Everything is imported and ready to use.\n\n What to do now? \n  1. You need to import your hooks when you use them.\n  2. Initialize your routes in App.js . \n  3. Import axios in the file which you are going to use it.\n"
 fi
